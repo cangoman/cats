@@ -10,8 +10,11 @@ const breedDetailsFromFile = function(breed, callback) {
     console.log("In readFile's Callback: it has the data.");
 
     if (!error) callback(data);
+    else callback(undefined);
   });
 };
 
 
-breedDetailsFromFile('Bombay', printData);
+//breedDetailsFromFile('Bombay', printData);
+
+module.exports = breedDetailsFromFile;
